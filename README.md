@@ -1,11 +1,17 @@
 Java Objects: [20/04/2026]
 
 https://www.geeksforgeeks.org/java/object-class-in-java/
+
 to String - https://www.geeksforgeeks.org/java/serialization-and-deserialization-in-java/
+
 hashcode - https://www.geeksforgeeks.org/java/method-class-hashcode-method-in-java/
+
 equals - https://www.geeksforgeeks.org/java/string-equals-method-in-java/
+
 getClass - https://www.geeksforgeeks.org/java/writer-getclass-method-in-java-with-examples/
+
 finalize - https://www.geeksforgeeks.org/java/finalize-method-in-java-and-how-to-override-it/
+
 clone - https://www.geeksforgeeks.org/java/clone-method-in-java-2/
 
     CloneNotSupported - https://www.geeksforgeeks.org/java/clonenotsupportedexception-in-java-with-examples/
