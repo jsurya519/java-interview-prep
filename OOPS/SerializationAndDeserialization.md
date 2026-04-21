@@ -6,7 +6,8 @@ The class must implement Serializable Interface to serialize the objects of the 
 **Deserialization:**
 Deserialization is a reverse process to convert the byteStream into Object of the class.
 
-![91f42d114f47f5d3c4a34f4fa776ea9f.png](:/599b9fd58ecc475b814efcfed64eed20)
+<img width="629" height="417" alt="image" src="https://github.com/user-attachments/assets/4964ecd7-2bdd-4b3f-84ca-fbe500a5a72f" />
+
 
 **Points to remember while using Serialization:**
 1. **Parent-Child Serialization:** If a parent class has implemented Serializable interface then child class doesn't need to implement it. But vice-versa is not true.
