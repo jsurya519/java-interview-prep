@@ -4,6 +4,17 @@ A marker interface is a interface that contains no methods and fields. It is use
 1. Cloneable Interface
 2. Serializable Interface
 
+```java
+
+interface Cloneable {
+	// Marker Interface
+}
+
+interface Serializable {
+  	// Marker Interface
+}
+```
+
 **Cloneable Interface:**
 It helps to clone an object using Object.clone(). If class doesn't implement Cloneable interface, then clone() throws CloneNotSupportedException. clone() provides only shallow copy.
 
