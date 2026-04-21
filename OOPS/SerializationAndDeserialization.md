@@ -86,4 +86,11 @@ public class CheckSerializable {
 
 
 ---
+**SerialVersionUID:**
+SerialVersionUID is used as a version identifier for the class during serialization. If the version of class didn't match at the time of deserialization, then it throws InvalidClassException.
 
+By default, JVM generates serialVersionUID based on class structure.
+To define our own, we use:
+```java
+private static final long serialVersionUID = 3L;
+```
