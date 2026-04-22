@@ -1,6 +1,8 @@
 Object class is the root of the java class hierarchy. Every class in Java either directly or indirectly extends Object. If a class does not extend any other class then it is a direct child class of Object, and if it extends another class, then it is indirectly derived. Therefore the Object class methods are available to all Java classes. It provides essential methods like toString(), equals(), hashCode(), clone(), etc..
 
-![da23b408ead64a6ae23a7a84a66e4000.png](:/8e11c386762a45ceac2cf8fc4b0ddf66)
+<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/b02376c4-f312-4746-a8cc-1eeb2640012f" />
+
+
 
 ## 1. toString() method:
 toString() provides a String representation of an object and is used to convert an object to a String.
