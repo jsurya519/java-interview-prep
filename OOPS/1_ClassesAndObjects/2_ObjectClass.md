@@ -63,7 +63,11 @@ We can override the hashCode method to write custom to find if the object is mod
 ```java
 class Employee{
 
-    int id = 101;
+	int id;
+    Employee(int id)
+    {
+        this.id=id;
+    }
 
     @Override
     public int hashCode(){
@@ -72,8 +76,11 @@ class Employee{
     }
 
     public static void main(String[] args) {
-        Employee e = new Employee();
+        Employee e = new Employee(100);
         System.out.println(e.hashCode());
+
+		e.id=101;
+		System.out.println(e.hashCode());
     }
 }
 ```
