@@ -53,6 +53,7 @@ public class Main {
 ```
 
 Object created → hash code generated (based on identity)
+
 Object fields change → ❌ hash code stays the same
 
 
