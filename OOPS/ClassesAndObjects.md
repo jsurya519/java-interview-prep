@@ -85,7 +85,7 @@ Used for dynamic class loading as seen in frameworks like Spring.
 
 ## Anonymous Object
 
-An anonymous object is an object that is created without giving it a name. Anonymous objects are often used to create objects on the fly and pass them as arguments to methods.
+An anonymous object is an object that is created without giving it a name or reference variable. Anonymous objects are often used to create objects on the fly and pass them as arguments to methods.
 
 ```java
 import java.io.*;
