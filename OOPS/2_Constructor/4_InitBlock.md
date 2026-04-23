@@ -1,3 +1,4 @@
+## Init Block:
 When we want certain common resources to be executed with every constructor we can put the code in the init block. Init block is always executed before any constructor, whenever a constructor is used for creating a new object.
 
 ```java
