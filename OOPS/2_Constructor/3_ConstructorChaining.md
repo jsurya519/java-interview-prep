@@ -1,6 +1,6 @@
 Constructor chaining is the process of calling one constructor from another constructor. It is used to avoid duplicate codes while having multiple constructor (by means of constructor overloading) and make code more readable.
 
-**Constructor chaining types:**
+## Constructor chaining types:
 1. Within same class
 2. From base class
 
