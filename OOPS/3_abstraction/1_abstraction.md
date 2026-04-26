@@ -44,7 +44,7 @@ public class Geeks{
 }
 ```
 
-![3bb4f85f2d4428f5c4d07208c3eb18ee.png](:/3af6ea6e4d2b4cceb75ca1da1a1aec3e)
+<img width="768" height="384" alt="image" src="https://github.com/user-attachments/assets/d9444046-59ca-48b8-ad95-da97eb0b166b" />
 
 
 
