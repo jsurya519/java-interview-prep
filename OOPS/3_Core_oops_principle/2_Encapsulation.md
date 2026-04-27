@@ -7,7 +7,9 @@ Encapsulation in Java is an object-oriented principle that binds data and method
 
 ## Key Rules:
 **1. Declare data as private:** Hide the class data so it cannot be accessed directly from outside the class.
+
 **2. Use getters and setters:** Keep variables private and provide public getter and setter methods for controlled access and safe modification, often with validation.
+
 **3. Apply proper access modifiers:** Use private for data hiding and public for methods that provide access
 
 ```java
