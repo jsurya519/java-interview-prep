@@ -1,6 +1,8 @@
 ## Polymorphism:
 poly - many
+
 morph - forms
+
 Means it has multiple forms. It allows objects to behave differently based on their specific class type.
 
 ## Types of Polymorphism:
