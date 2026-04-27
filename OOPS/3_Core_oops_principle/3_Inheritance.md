@@ -165,21 +165,32 @@ Java does not support multiple inheritances with classes. In Java, we can achiev
 
 ```java
 interface LandVehicle {
-    default void landInfo() {
-        System.out.println("This is a LandVehicle");
-    }
+    void landInfo();
 }
 interface WaterVehicle {
-    default void waterInfo() {
-        System.out.println("This is a WaterVehicle");
-    }
+    void waterInfo();
 }
-// Subclass implementing both interfaces
+
 class AmphibiousVehicle implements LandVehicle, WaterVehicle {
     AmphibiousVehicle() {
         System.out.println("This is an AmphibiousVehicle");
     }
+
+    @Override
+    void waterInfo()
+    {
+        System.out.println("This is a WaterVehicle");
+
+    }
+
+    @Override
+    void landInfo()
+    {
+        System.out.println("This is a landVehicle");
+
+    }
 }
+
 public class Test {
     public static void main(String[] args) {
         AmphibiousVehicle obj = new AmphibiousVehicle();
