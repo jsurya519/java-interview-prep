@@ -55,10 +55,12 @@ public class Geeks {
 
 ## Types of Inheritance:
 
-![0942f7ee8cfe370a3dda34e860a78faa.png](:/9d18995abb1d4ab0968a1ed42745dac2)
+<img width="1100" height="733" alt="image" src="https://github.com/user-attachments/assets/15c9025b-5b21-4389-952f-ee9d87597701" />
+
 
 ## 1. Single Inheritance:
-![ec8e8bb8c78dcb25716dbab81880af34.png](:/c75995f9fce54a208866151338d20493)
+<img width="682" height="400" alt="image" src="https://github.com/user-attachments/assets/09086734-6e2e-4920-9522-7a6028ef112a" />
+
 
 ```java
 //Super class
@@ -89,8 +91,8 @@ public class Test {
 
 ## 2. Multilevel Inheritance
 
+<img width="682" height="400" alt="image" src="https://github.com/user-attachments/assets/145a54b6-95c5-47dd-8a52-0fce89f02b58" />
 
-![75a7249dff084d95b70c287fa5144503.png](:/897e76d8cc264fb2a6f23fcf84d97d6a)
 
 ```java
 class Vehicle {
@@ -120,7 +122,8 @@ public class Geeks {
 ```
 
 ## 3. Hierarchical Inheritance
-![5ed975c17fdf4a493b2c6231fde3d281.png](:/7f65648f33924abcb2131c7973c405de)
+<img width="682" height="400" alt="image" src="https://github.com/user-attachments/assets/4f9abac3-d56d-4a39-8ec8-967b83425727" />
+
 
 ```java
 class Vehicle {
@@ -157,7 +160,8 @@ public class Test {
 ## 4. Multiple Inheritance (Through Interfaces)
 Java does not support multiple inheritances with classes. In Java, we can achieve multiple inheritances only through Interfaces.
 
-![4425382e91bb598e5e0c21337d0d03ca.png](:/4edb3b70bd3a4148974b19be09bd7233)
+<img width="682" height="400" alt="image" src="https://github.com/user-attachments/assets/0fc4f6d5-4792-4f4d-8933-5c347087ba50" />
+
 
 ```java
 interface LandVehicle {
@@ -192,7 +196,8 @@ public class Test {
 ## 5. Hybrid Inheritance
 It is a mix of two or more of the above types of inheritance. In Java, we can achieve hybrid inheritance only through Interfaces if we want to involve multiple inheritance to implement Hybrid inheritance.
 
-![6c817bf8f918ea1ce8da1bcba5eecd01.png](:/06c5706c54c5451c863cefec49173c74)
+<img width="682" height="400" alt="image" src="https://github.com/user-attachments/assets/33fbc1e8-6af2-4eaf-8b8b-72d75b246084" />
+
 
 ```java
 // Superclass
