@@ -4,7 +4,8 @@ morph - forms
 Means it has multiple forms. It allows objects to behave differently based on their specific class type.
 
 ## Types of Polymorphism:
-![7b482d2de91181a863b61c9eb6c9647a.png](:/a9bfe9fd7ae5429887c6f1202c2c424c)
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/6b49fa0d-9db1-4a97-9118-829f30384639" />
+
 
 ## 1. Compile-Time Polymorphism
 Compile-Time Polymorphism in Java, also known as static polymorphism, is achieved mainly through method overloading.
