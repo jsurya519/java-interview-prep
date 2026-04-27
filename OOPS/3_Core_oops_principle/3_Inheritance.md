@@ -277,8 +277,11 @@ public class Moon extends Earth {
 Now, based on the above example, in Object-Oriented terms, the following are true:
 
 SolarSystem is the superclass of Earth class.
+
 SolarSystem is the superclass of Mars class.
+
 Earth and Mars are subclasses of SolarSystem class.
+
 Moon is the subclass of both Earth and SolarSystem classes.
 
 ```java
