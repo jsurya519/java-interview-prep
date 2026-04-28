@@ -7,7 +7,8 @@ A package in Java is a mechanism to group related classes, interfaces, and sub-p
 4. Encouraging modular programming
 
 ## Types of Packages:
-![f57c92bc8ea5565657e566c06c7ceb77.png](:/a7da4fb0f7154444ba1ab3d5625add33)
+<img width="800" height="237" alt="image" src="https://github.com/user-attachments/assets/0b42950b-5ac2-4e27-b024-805d32fe1a10" />
+
 
 **1. Built-in Packages:**
 1. java.lang
