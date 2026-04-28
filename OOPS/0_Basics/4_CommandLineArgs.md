@@ -28,7 +28,8 @@ class GFG{
 ```
 
 **Output:**
-![bae406f95c9097dfed387cc9162b87d1.png](:/8cbd877cb0934ad99a41bf2ee020e8ad)
+<img width="851" height="268" alt="image" src="https://github.com/user-attachments/assets/03657e05-a621-4ea2-930c-94804cf0b7ae" />
+
 
 ---
 ```java
@@ -60,4 +61,4 @@ class Hello {
 ```
 
 **Output:**
-![04a10627ab32847aeee8f17e1f2135c1.png](:/76daf7df27224518930914ab7eb08bf9)
+<img width="649" height="167" alt="image" src="https://github.com/user-attachments/assets/f85332f4-cde7-4730-bab6-982b8ae5dbf9" />
