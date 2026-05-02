@@ -152,10 +152,12 @@ In Java, all exceptions and errors are subclasses of the Throwable class. It has
 1. Exception.
 2. Error
 
-![c4f26740c57756822db03396cc16ae2b.png](:/ce1b9c98a90944b986b2145ba8bc649e)
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/af2491b0-be08-4290-8391-57941d849621" />
+
 
 **Types of Exception:**
-![728a0884508ae08caa1c67bf13758cda.png](:/32c9e3d855e44987a1d8b231bba2f948)
+<img width="768" height="385" alt="image" src="https://github.com/user-attachments/assets/6af46808-8ab2-46ac-b041-7b29afc51a23" />
+
 
 **1. Built-in Exception:**
 Built-in Exception are pre-defined exception classes provided by Java to handle common errors during program execution. There are two types
