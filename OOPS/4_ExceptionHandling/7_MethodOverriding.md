@@ -1,9 +1,11 @@
 **Exception Handling with Method Overriding:**
 
 **Rules for method overriding:**
+
 **1. Unchecked Exception:**
    (RuntimeException and its subclasses)
    No restrictions
+   
 **2. Checked Exception:**
 Subclass are allowed to throw only anyone of the following
 1. same exception
