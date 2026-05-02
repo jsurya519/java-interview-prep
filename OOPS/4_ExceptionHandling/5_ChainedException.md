@@ -69,7 +69,8 @@ public class Geeks {
 ```
 
 **Output:**
-![d9206821fd2e2e0c84e5e769ba944b1b.png](:/b1ce3a59bf7749d5b2dbdf6b5465ca3f)
+<img width="1013" height="290" alt="image" src="https://github.com/user-attachments/assets/ea9ce88f-4e24-4192-bc30-4940b801545a" />
+
 
 **Note:**
 Normal Exception - Throwable(String msg);
