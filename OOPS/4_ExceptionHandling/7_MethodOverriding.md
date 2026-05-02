@@ -72,7 +72,8 @@ class SubClass extends SuperClass {
 ```
 
 **Output:**
-![5e32b328b1ec6238909e0114c4ad9ed0.png](:/9c2659541bbc4b529c404dcf57ea9946)
+<img width="822" height="185" alt="image" src="https://github.com/user-attachments/assets/897fbac9-1b1b-41b9-98ab-c8c1992a5224" />
+
 
 **case 2:**
 ```java
@@ -131,7 +132,8 @@ class SubClass extends SuperClass {
 ```
 
 Output:
-![af94dd8ba9bc4219c5078aa1947a0475.png](:/496292269c3b422ab681806a0b1aa000)
+<img width="803" height="155" alt="image" src="https://github.com/user-attachments/assets/c1e67a75-1af6-4995-a085-6d0df36b12fa" />
+
 
 **case 5:**
 
