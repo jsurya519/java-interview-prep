@@ -51,7 +51,8 @@ public class Geeks {
 }
 ```
 Output:
-![4592d04b1b2c2322a99d9ef7fa8be6fd.png](:/cea993d515584f51ae252727dcce6693)
+<img width="900" height="128" alt="image" src="https://github.com/user-attachments/assets/c250da33-b2b2-4963-bd5c-a887e79485a4" />
+
 
 ## finalize() Method:
 The finalize() method is called by the Garbage Collector just before an object is removed from memory. It allows us to perform clean up activity.
@@ -91,5 +92,4 @@ public class Geeks {
     }
 }
 ```
-
-![6d90d5eab711a495398e10d36fba7e12.png](:/a467a7c161d44e3389807b630c214f9e)
+<img width="900" height="126" alt="image" src="https://github.com/user-attachments/assets/1d15d127-a463-409a-b20d-5aca48944bca" />
