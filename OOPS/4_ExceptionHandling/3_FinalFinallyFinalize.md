@@ -2,8 +2,11 @@
 
 ## final:
 final enforces immutability and prevents changes to variables, methods or classes.
+
 variables - can't be changed
+
 methods - can't be overriden
+
 classes - can't be inherited
 
 ```java
