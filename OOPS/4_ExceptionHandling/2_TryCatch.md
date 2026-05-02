@@ -71,8 +71,7 @@ public class Geeks {
         System.out.println("Program continues after nested try-catch");
     }
 }
-// Output:
-// Caught ArithmeticException: java.lang.ArithmeticException: / by zero
+
 ```
 
 ```java
@@ -108,8 +107,4 @@ public class Geeks {
         System.out.println("Program continues after nested try-catch");
     }
 }
-// Output:
-// Outer try block started
-// Caught ArithmeticException in inner try-catch: java.lang.ArithmeticException: / by zero
-// Caught NullPointerException in inner try-catch: java.lang.NullPointerException: Cannot i...
 ```
