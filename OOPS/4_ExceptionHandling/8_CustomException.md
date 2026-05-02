@@ -8,7 +8,9 @@ A user-defined custom exception is an exception class created by the programmer 
 4. Invalid login attempt
 
 Types of custom exceptions:
-![82c291f26e697cda9247090af6d90c3c.png](:/bcbdfe421fe143709ed5d987d35cf9c3)
+
+<img width="539" height="216" alt="image" src="https://github.com/user-attachments/assets/11d4c29e-8758-4bdb-a71f-78423ec8f326" />
+
 
 1. **Checked Exceptions:** It extends the Exception class. and it must be declared in the throws clause of the method signature.
 2. **Unchecked Exceptions:** It extend RuntimeException and are not checked by the compiler, so they don’t need to be declared or handled.
