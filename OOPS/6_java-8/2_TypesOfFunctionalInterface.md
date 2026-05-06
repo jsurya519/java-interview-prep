@@ -1,7 +1,8 @@
 ## Types of Functional Interface:
 There are mainly four functional interface types.  These are widely used in Stream API, collections and lambda-based operations.
 
-![73e9d7dc8e58209a4d4de9285b47abc9.png](:/b0d63705b5a6459996ba3e06e21cc162)
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/7c2d0041-781f-4e67-9169-e745d7b6429f" />
+
 
 ## 1. Consumer
 Consumer interface of the functional interface is the one that accepts only one argument. It is used for performing an action, such as printing or logging.
