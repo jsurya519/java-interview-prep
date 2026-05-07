@@ -285,9 +285,6 @@ class Geeks
         String s3 = (String)al.get(2);
     }
 }
-// Output:
-// 15: error: no suitable method found for add(int)
-//         al.add(10);
 ```
 
 **Individual Type Casting is not needed:**
