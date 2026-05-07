@@ -2,10 +2,15 @@
 Generics in Java refer to **parameterized types** that allow writing code which works with multiple data types using a single class, interface, or method.
 
 Consider below example,
+
 void fun(int x);
+
 Here
+
 void -> represents return data type
+
 x -> represent parameter
+
 int -> parameter type, but it is actual type. i.e int
 
 Another example,
