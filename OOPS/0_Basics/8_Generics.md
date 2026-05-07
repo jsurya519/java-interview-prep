@@ -223,9 +223,13 @@ public class Geeks {
 The common type parameters are as follows:
 
 T: Type
+
 E: Element
+
 K: Key
+
 N: Number
+
 V: Value
 
 ---
