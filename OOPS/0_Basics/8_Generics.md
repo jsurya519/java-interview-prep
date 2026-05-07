@@ -14,9 +14,13 @@ x -> represent parameter
 int -> parameter type, but it is actual type. i.e int
 
 Another example,
+
 void fun(T x);
+
 Here
+
 x -> represents parameter
+
 T -> **"type-parameter"** used as parameter type
 
 The actual type is decided when the generic class/interface/method is used.
