@@ -25,9 +25,11 @@
 **remove(int index):** Removes the element at the specified index and shifts subsequent elements left.
 
 **5. Accessing Elements**
+
 **get(int index):** This method returns the element at the specified index in the list.
 
 **6. Checking if an element is present or not**
+
 **contains(Object o):** This method takes a single parameter, the object to be checked if it is present in the list.
 
 ---
