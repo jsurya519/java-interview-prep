@@ -21,6 +21,7 @@
 **lastIndexOf(Object o):** It returns the index of the last occurrence of the specified element in the list or -1 if the element is not found
 
 **4. Removing Elements:**
+
 **remove(Object o):** Removes the first occurrence of the specified object from the list.
 **remove(int index):** Removes the element at the specified index and shifts subsequent elements left.
 
