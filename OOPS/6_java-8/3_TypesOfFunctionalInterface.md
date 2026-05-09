@@ -30,11 +30,21 @@ public interface Predicate<T> {
 ## 3. Function:
 The function interface takes one argument and returns a result. It is commonly used for transforming data. Several variations exist:
 
-1. Bi-Function: Takes two arguments and returns a result.
-2. Unary Operator: Input and output are of the same type.
-3. Binary Operator: Like BiFunction but with same input/output type.
+1. Function: Takes one argument and returns a result;
+2. Bi-Function: Takes two arguments and returns a result.
+3. Unary Operator: Input and output are of the same type.
+4. Binary Operator: Like BiFunction but with same input/output type.
 
-**1. BiFunction:**
+**1. Function:**
+```java
+@FunctionalInterface
+public interface Function<T, R> {
+
+    R apply(T t);
+}
+```
+
+**2. BiFunction:**
 ```java
 @FunctionalInterface
 public interface BiFunction<T, U, R> {
@@ -43,7 +53,7 @@ public interface BiFunction<T, U, R> {
 }
 ```
 
-**2. Unary Operator:**
+**3. Unary Operator:**
 ```java
 @FunctionalInterface
 public interface UnaryOperator<T>
@@ -51,7 +61,7 @@ public interface UnaryOperator<T>
 }
 ```
 
-**3. Binary Operator:**
+**4. Binary Operator:**
 ```java
 @FunctionalInterface
 public interface BinaryOperator<T>
