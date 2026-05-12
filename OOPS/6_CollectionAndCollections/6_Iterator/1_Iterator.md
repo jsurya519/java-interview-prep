@@ -36,7 +36,8 @@ public class Geeks {
 ```
 
 ## Hierarchy of Iterator:
-![8fcd78aeb5dfdb6bbf28ea93bb58e48c.png](:/6f3ac38080d44ffb9dcef238cfb12e9d)
+<img width="465" height="235" alt="image" src="https://github.com/user-attachments/assets/6274c5f9-2802-4fdb-952b-9ea35b2eda41" />
+
 
 All concrete classes of List, Queue and Set interfaces has iterator() implementation.
 
@@ -57,27 +58,31 @@ it.remove();  // Throws IllegalStateException
 Iterator<String> citiesIterator = cities.iterator();
 ```
 
-![9c386f2e614ed020f455be48321fc21a.png](:/89bea6ab3a754d2eb0e54c1704a3dbc2)
+<img width="542" height="240" alt="image" src="https://github.com/user-attachments/assets/2e280c12-0007-4f51-a4ad-3e2afb12666a" />
+
 
 ```java
 citiesIterator.hasNext(); //true
 citiesIterator.next(); //G-1
 ```
 
-![7e493ed12221988224c87024d0ad2efd.png](:/8d2d04058db848649c5a718493735321)
+<img width="562" height="254" alt="image" src="https://github.com/user-attachments/assets/52f4eac1-4f20-42a2-970f-ba20ad510f67" />
+
 
 ```java
 citiesIterator.hasNext(); // true
 citiesIterator.next(); //G-2
 ```
 
-![66deb6141ad7b13b8cd576ae115d3699.png](:/356ba89a07de4e17b98194fc53a23e83)
+<img width="559" height="246" alt="image" src="https://github.com/user-attachments/assets/73105c7f-658f-4987-8ac6-6de66f5f0bc5" />
+
 
 ```java
 citiesIterator.hasNext(); //false
 ```
 
-![5be1f9b2c218c8530e3847da5bb6914b.png](:/b9f65887eec446f1a7f92fca55ae8280)
+<img width="658" height="330" alt="image" src="https://github.com/user-attachments/assets/77cdce3c-9834-4c54-8cf4-d8d13ac9ab17" />
+
 
 ```java
 import java.util.ArrayList;
