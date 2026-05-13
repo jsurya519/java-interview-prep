@@ -22,7 +22,7 @@ public class Dummy {
 
 //        Using Lambda expressions
 //        Employee e = () -> System.out.println("Hello world");
-//        e.fun();
+//        e.getSalary();
 
         Student s = new Student();
         Employee e = s::fun;
