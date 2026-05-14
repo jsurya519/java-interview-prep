@@ -203,5 +203,40 @@ public class Test {
 }
 ```
 
----
+**Another example with UnaryOperator:**
 
+```java
+
+import java.util.function.UnaryOperator;
+
+class Student
+{
+    int id;
+    String name;
+
+    Student(int id, String name)
+    {
+        this.id=id;
+        this.name=name;
+    }
+
+    Student changeName()
+    {
+        this.name = "DUMMY";
+        return this;
+    }
+}
+
+public class Dummy {
+
+    public static void main(String[] args){
+
+        Student s = new Student(1, "jay");
+        System.out.println(s.id  + " " + s.name);
+
+        UnaryOperator<Student> tt = Student::changeName;
+        tt.apply(s);
+        System.out.println(s.id  + " " + s.name);
+    }
+}
+```
