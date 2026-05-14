@@ -8,14 +8,19 @@
 
 ## Internal Working of Stream:
 **1. Create a Stream:** From collections, arrays or static methods.
+
 **2. Apply Intermediate Operations:** Transform data (e.g., filter(), map(), sorted()).
+
 **3. Apply Terminal Operation:** Produce a result (e.g., forEach(), collect(), reduce()).
 
 ## Creation of Stream:
 There are four ways of creating a Stream
 **1. From a Collection:** Create a stream directly from a List, Set or any Collection using stream()
+
 **2. From an Array:** Use Arrays.stream(array) to convert an array into a stream.
+
 **3. Using Stream.of():** Create a stream from a fixed set of values using Stream.of().
+
 **4. Infinite Stream:** Generate an unbounded sequence using Stream.iterate() or Stream.generate()
 
 ```java
@@ -52,9 +57,13 @@ public class StreamCreation {
 Intermediate operations transform a stream into another stream. Some common intermediate operations include:
 
 **1. filter():** Filters elements based on a specified condition.
+
 **2. map():** Transforms each element in a stream to another value.
+
 **3. Sorted():** Sorts the elements of a stream.
+
 **4. Distinct():** Remove duplicates.
+
 **5. Skip():** Skip first n elements.
 
 ```java
@@ -83,10 +92,15 @@ public class StreamIntermediate {
 Terminal Operations are the operations that on execution return a final result as an absolute value.
 
 **1. ForEach():** It iterates all the elements in a stream.
+
 **2. collect(Collectors.toList()):** It collects stream elements into a list (or other collections like set/map).
+
 **3. Reduce():** It reduces stream elements into a single aggregated result.
+
 **4. count():** It returns the total number of elements in a stream.
+
 **5. anyMatch() / allMatch() / noneMatch():** They check whether elements match a given condition.
+
 **6. findFirst() / findAny():** They return the first or any element from a stream.
 
 ```java
@@ -119,7 +133,9 @@ public class StreamTerminal {
 Java provides specialized streams for primitive data types:
 
 **1. IntStream** -> for int values
+
 **2. LongStream** -> for long values
+
 **3. DoubleStream** -> for double values
 
 ```java
