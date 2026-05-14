@@ -3,7 +3,8 @@
 2. Stream does not store data. It only processes data.
 3. **Lazy Execution:** Operations are executed only when needed (terminal operation).
 
-![72254b0a13613873e0d1658514d3f307.png](:/e37a7c02195d4efbb9ba6da64ab4282e)
+<img width="801" height="401" alt="image" src="https://github.com/user-attachments/assets/b2ea0835-b881-4709-9471-1e21f9c58dc5" />
+
 
 ## Internal Working of Stream:
 **1. Create a Stream:** From collections, arrays or static methods.
