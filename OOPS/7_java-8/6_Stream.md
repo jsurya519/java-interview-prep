@@ -15,6 +15,7 @@
 
 ## Creation of Stream:
 There are four ways of creating a Stream
+
 **1. From a Collection:** Create a stream directly from a List, Set or any Collection using stream()
 
 **2. From an Array:** Use Arrays.stream(array) to convert an array into a stream.
