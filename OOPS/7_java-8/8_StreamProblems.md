@@ -191,3 +191,20 @@ Employee emp =
                  .max(Comparator.comparing(Employee::getSalary))
                  .get();
 ```
+
+**16.  Given a list of transactions, find the sum of transaction amounts for each day using Java streams:**
+
+```java
+List<Transaction> transactions = Arrays.asList(
+    new Transaction("2022-01-01", 100),
+    new Transaction("2022-01-01", 200),
+    new Transaction("2022-01-02", 300),
+    new Transaction("2022-01-02", 400),
+    new Transaction("2022-01-03", 500)
+);
+
+Map<String, Integer> sumByDay = transactions
+                        .stream()
+                        .collect(Collectors.groupingBy(Transaction::getDate,
+                               Collectors.summingInt(Transaction::getAmount)));
+```
