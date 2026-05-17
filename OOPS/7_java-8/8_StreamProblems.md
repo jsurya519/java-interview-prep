@@ -20,24 +20,32 @@ System.out.println(even);
 ```java
 List<String> names = Arrays.asList("java", "spring", "boot");
 
-List<String> result =
-        names.stream()
-             .map(String::toUpperCase)
-             .toList();
+List<String> result = names.stream()
+                    	.map(String::toUpperCase)
+                        .toList();
 
-System.out.println(result);
+        //Using Lambda
+        result =
+                names.stream()
+                        .map(x->x.toUpperCase())
+                        .toList();
+
+        System.out.println(result);
 ```
 
 **3. Find Sum of Numbers**
 
 ```java
-List<Integer> nums = Arrays.asList(10,20,30);
+        List<Integer> nums = Arrays.asList(10,20,30);
 
-int sum =
-        nums.stream()
-            .reduce(0, Integer::sum);
+        int sum =
+                nums.stream()
+                        .reduce(0, Integer::sum);
 
-System.out.println(sum);
+        //Using Lambda
+        sum = nums.stream().reduce(0, (a,b)->a+b);
+
+        System.out.println(sum);
 ```
 
 **4. Count Strings Starting With A**
@@ -58,14 +66,17 @@ System.out.println(count);
 **5. Find Maximum Number**
 
 ```java
-List<Integer> nums = Arrays.asList(4,7,2,9);
+        List<Integer> nums = Arrays.asList(4,7,2,9);
 
-int max =
-        nums.stream()
-            .max(Integer::compare)
-            .get();
+        int max =
+                nums.stream()
+                        .max(Integer::compare)
+                        .get();
 
-System.out.println(max);
+        //Using Lambda
+        max = nums.stream().max((a,b)->a<b?-1:a>b?1:0).get();
+
+        System.out.println(max);
 ```
 
 **6. Remove Duplicates**
@@ -87,6 +98,11 @@ System.out.println(unique);
 employees.stream()
          .sorted(Comparator.comparing(Employee::getSalary))
          .forEach(System.out::println);
+
+//Using Lambda
+employees.stream()
+                .sorted((a,b)->a.getSalary()<b.getSalary()?-1:a.getSalary()>b.getSalary()?1:0)
+                .forEach(System.out::println);
 ```
 
 **8. Find First Element**
@@ -107,17 +123,20 @@ System.out.println(first);
 **9. Find Second Highest Number**
 
 ```java
-List<Integer> nums = Arrays.asList(10,40,20,50,30);
+        List<Integer> nums = Arrays.asList(10,40,20,50,30);
 
-int secondHighest =
-        nums.stream()
-            .distinct()
-            .sorted(Comparator.reverseOrder())
-            .skip(1)
-            .findFirst()
-            .get();
+        int secondHighest =
+                nums.stream()
+                        .distinct()
+                        .sorted(Comparator.reverseOrder())
+                        .skip(1)
+                        .findFirst()
+                        .get();
 
-System.out.println(secondHighest);
+        //Using Lambda
+        secondHighest = nums.stream().distinct().sorted((a,b)->a<b?1:a>b?-1:0).skip(1).findFirst().get();
+
+        System.out.println(secondHighest);
 ```
 
 **10. Find Frequency of Characters**
@@ -139,11 +158,28 @@ System.out.println(map);
 **11. Group Employees by Department**
 
 ```java
-Map<String, List<Employee>> map =
-        employees.stream()
-                 .collect(Collectors.groupingBy(
-                         Employee::getDepartment
-                 ));
+        Map<String, List<Employee>> map =
+                employees.stream()
+                        .collect(Collectors.groupingBy(
+                                Employee::getDepartment
+                        ));
+
+        //Using Lambda
+        Map<String, List<Employee>> map =
+                employees.stream()
+                        .collect(Collectors.groupingBy(
+                                x->x.getDepartment()
+                        ));
+
+		//Get count;
+
+        Map<String, Long> map =
+                employees.stream()
+                        .collect(Collectors.groupingBy(
+                                x->x.getDepartment(),
+                                Collectors.counting()
+                        ));
+
 ```
 
 **12. Find Duplicate Elements**
@@ -181,15 +217,29 @@ Map<Boolean, List<Integer>> map =
             .collect(Collectors.partitioningBy(
                     n -> n % 2 == 0
             ));
+
+// Get count
+Map<Boolean, Long> map =
+        nums.stream()
+            .collect(Collectors.partitioningBy(
+                    n -> n % 2 == 0,
+					Collectors.counting()
+            ));
 ```
 
 **15. Find Employee With Highest Salary**
 
 ```java
-Employee emp =
-        employees.stream()
-                 .max(Comparator.comparing(Employee::getSalary))
-                 .get();
+        Employee emp =
+                employees.stream()
+                        .max(Comparator.comparing(Employee::getSalary))
+                        .get();
+
+        //Using Lambda
+        Employee emp =
+                employees.stream()
+                        .max((a,b)->a.getSalary()<b.getSalary()?-1:a.getSalary()>b.getSalary()?1:0)
+                        .get();
 ```
 
 **16.  Given a list of transactions, find the sum of transaction amounts for each day using Java streams:**
