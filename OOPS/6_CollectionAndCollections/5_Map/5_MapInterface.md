@@ -3,12 +3,16 @@
 2. HashMap and LinkedHashMap allow one null key, and TreeMap does NOT allow null keys
 3. It provides efficient retrieval, insertion, and deletion operations based on keys.
 
-![718b6dd44b41ce656165c08554fa1fe4.png](:/096c4496da5c4510855c1cf6dca2672a)
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/d6034568-f581-4621-86ce-a054a5f11b33" />
+
 
 ## Implemented Classes of Map Interface:
 **1. HashMap:** Stores key-value pairs using hashing for fast access, insertion, and deletion.
+
 **2. LinkedHashMap:** Similar to HashMap but maintains the insertion order of key-value pairs.
+
 **3. TreeMap:** Stores key-value pairs in sorted order using natural ordering or a custom comparator.
+
 **4. Hashtable:** A synchronized Map implementation that doesn’t allow null keys or values.
 
 ```java
