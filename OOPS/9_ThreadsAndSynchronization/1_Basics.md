@@ -25,7 +25,9 @@ java MyApp running → process
 A thread is the smallest unit of execution inside a process.
 
 **In Java:**
+
 Process = entire Java application (JVM)
+
 Thread = path of execution doing some task inside that application
 
 Threads run inside a process and execute program instructions.
