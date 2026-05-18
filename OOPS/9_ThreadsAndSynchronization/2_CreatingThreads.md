@@ -1,6 +1,8 @@
 ## Creating Threads:
 We can create threads in java using two ways
-![66d35e496639898e5f7130b135e8cd4b.png](:/2778e959434f4a28b54946bc74a43d1c)
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/ac8e8fd7-8a13-4e53-987c-d9a11700adac" />
+
 
 1. Extending Thread Class
 2. Implementing a Runnable interface
