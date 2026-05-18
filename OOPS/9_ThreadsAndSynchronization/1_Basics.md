@@ -1,20 +1,27 @@
 ## Threads Basics:
 
 **What is a program?**
+
 A program is passive code on disk.
 
 **What is a process?**
+
 A process is that program in execution.
 
 **Example:**
+
 chrome.exe on disk → program
+
 Opened Chrome browser → process
 
 **Example in java:**
+
 MyApp.class → program
+
 java MyApp running → process
 
 **What is a thread?**
+
 A thread is the smallest unit of execution inside a process.
 
 **In Java:**
