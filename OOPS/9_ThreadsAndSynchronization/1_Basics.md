@@ -55,6 +55,7 @@ But internally, JVM already uses multiple threads even if you never create one.
 ---
 
 **What is thread?**
+
 A thread is a lightweight, independent unit of execution inside a program (process).
 
 **Multithreading:**
