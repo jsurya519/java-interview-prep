@@ -233,7 +233,9 @@ public class GFG {
 ```
 
 Output:
-![3b8a7c9384746c68b97bff89e4139e04.png](:/9f24934d5ca04c4c99e13c5435ee2c3a)
+
+<img width="573" height="155" alt="image" src="https://github.com/user-attachments/assets/d4875f2c-e7fe-4135-94a2-c3c6c3832ff9" />
+
 
 **Explanation: **
 1. Thread.currentThread().join() tells the main thread to wait for itself to die.
