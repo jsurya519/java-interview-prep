@@ -5,7 +5,8 @@ When a Java program starts, the Java Virtual Machine (JVM) creates a thread auto
 3. The default priority of the main thread is 5.
 4. It usually finishes last as it may perform cleanup and shutdown tasks.
 
-![d5bcfd0510470b22efa49843a8a6f2f8.png](:/d6c783675e124160a2ed11dcb2fc9c23)
+<img width="690" height="400" alt="image" src="https://github.com/user-attachments/assets/0f1840ad-6a2b-48d5-bec6-2c71b5ed99d9" />
+
 
 ```java
 import static java.lang.Thread.*;
