@@ -13,7 +13,9 @@ class Counter {
 ```
 
 Now suppose:
+
 Thread-1 calls increment()
+
 Thread-2 also calls increment()
 
 You may expect count value = 7.
