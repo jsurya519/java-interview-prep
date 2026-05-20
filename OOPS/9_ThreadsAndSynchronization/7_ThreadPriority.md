@@ -34,10 +34,13 @@ public class GFG {
 
 Higher-priority threads may get more CPU time, but the actual execution order is not guaranteed because it depends on the JVM and the OS scheduler.
 
-![0e16fa7010966ba3c5d9eb05e6384c27.png](:/3431859617904d7d8df3c0ac5e767774)
+<img width="568" height="333" alt="image" src="https://github.com/user-attachments/assets/45ec9a42-237c-4726-9f2c-d6e219d994e4" />
+
 
 ## Java provides three constant values in the Thread class:
 
 **Thread.MIN_PRIORITY (1):** Lowest possible priority for a thread.
+
 **Thread.NORM_PRIORITY (5):** Default priority assigned to a thread.
+
 **Thread.MAX_PRIORITY (10):** Highest possible priority for a thread.
