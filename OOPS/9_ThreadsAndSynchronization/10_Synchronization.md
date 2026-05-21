@@ -12,7 +12,8 @@ Since multiple threads can execute simultaneously, only one thread should execut
 A race condition happens when multiple threads access and modify shared data simultaneously, and the final result depends on which thread executes first.
 
 ## Ways to Achieve Synchronization:
-![ae037679b5cf50dc578e2afd7fd2b936.png](:/c9c2984d9f494913832f3b1070964c1a)
+<img width="800" height="288" alt="image" src="https://github.com/user-attachments/assets/95e993ec-74f3-4811-865f-51ef6419d935" />
+
 
 **1. Synchronized Methods:**
 Synchronized methods are used to lock an entire method so that only one thread can execute it at a time for a particular object. This ensures safe access to shared data but may reduce performance due to full method locking.
