@@ -99,5 +99,7 @@ public class Geeks {
 
 ## Preventing Deadlocks
 **Avoid Nested Locks:** This is the main reason for deadlock. Mainly happens when we give locks to multiple threads. Avoid giving lock to multiple threads if we already have given to one.
+
 **Avoid Unnecessary Locks:** We should have lock only those members who are required. Having a lock on unnecessarily can lead to deadlock.
+
 **Using thread join:** Deadlock condition appears when one thread is waiting for the other to finish. If this condition occurs we can use Thread. Join the with the maximum time you think the execution will take.
