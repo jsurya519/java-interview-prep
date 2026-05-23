@@ -147,3 +147,14 @@ public class Geeks {
 | Performance | Lightweight for small threads | Slightly higher overhead, but more flexible |
 | Usage | Simple synchronization, small thread pools | Complex synchronization, high concurrency scenarios |
 | Deadlock Handling | Less control | More explicit control but can still occur |
+
+## Lock Framework vs Thread Synchronization
+
+| Features | Lock Framework | Thread Synchronization (`synchronized`) |
+|---|---|---|
+| Flexibility | More flexible. Allows multiple locks for different methods. | Limited flexibility. Only one lock can be applied per method or class. |
+| Concurrency | Allows higher concurrency by using different locks for different tasks. | Less concurrency due to locking the entire method or class. |
+| Control Over Locking | Provides explicit control over when to lock and unlock. | Implicit locking with no control over the exact limit. |
+| List of Waiting Threads | The list of waiting threads can be seen using the Lock framework. | Not possible with `synchronized`. |
+| Deadlock Prevention | Offers better strategies to avoid deadlocks using `tryLock()` mechanisms. | Less control over deadlock prevention. |
+| Interruptible | Supports interruptible lock acquisition (e.g., `lock.tryLock()`). | `synchronized` blocks are non-interruptible. |
