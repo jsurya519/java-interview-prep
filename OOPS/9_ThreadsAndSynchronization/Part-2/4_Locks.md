@@ -2,6 +2,7 @@
 In Java, a lock is a synchronization mechanism that ensures mutual exclusion for critical sections in a multi-threaded program. It controls access to shared resources, ensuring thread safety. Some locks, like
 
 **Exclusive Lock(ReentrantLock):** Only one thread can acquire the lock at a time.
+
 **Shared Lock(ReadWriteLock):** Multiple threads can hold the lock simultaneously under certain conditions.
 
 **Basic usage of a Lock:**
