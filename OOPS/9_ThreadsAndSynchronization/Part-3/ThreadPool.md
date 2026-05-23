@@ -17,19 +17,25 @@ Here is the step by step working of thread pool.
 1. Tasks are submitted and placed in the Task Queue.
 2. Worker threads exist but are idle until work arrives.
 
-![0fd8de51eddfcff3966ecae40717ba97.png](:/e7928e283b254120962301b605f87d54)
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/db8a9cad-3273-4a7b-bb0c-6ae2156edb2d" />
+
 
 **Step 2: Task Assignment**
 1. Each idle thread picks a task from the queue.
 2. Example: Thread 1 -> Task 1, Thread 2 -> Task 2, Thread 3 -> Task 3
 3. Remaining tasks (Task 4, Task 5) wait in the queue.
-![eb7e7bfc61f5c9243be1a28f987ca8fc.png](:/3bb4adc4de2c45dfb0f990794e9167e8)
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/08ee3889-fade-4409-9b12-4b41b4680b49" />
+
+
 
 **Step 3: Thread Reuse**
 1. Once a thread completes its current task, it becomes idle again.
 2. It immediately takes the next waiting task from the queue.
 3. Example: Thread 1 -> Task 4, Thread 2 -> Task 5, Thread 3 -> Idle (no tasks left)
-![c95790bbebc7919e68da74a70cdaa641.png](:/6bd6bac414844269b4c48e6a3e3d0285)
+   
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/000879d4-0b99-4cd1-9739-2b1c39c46803" />
+
 
 ```java
 import java.util.concurrent.BlockingQueue;
@@ -145,4 +151,5 @@ public class ThreadPoolDemo {
 ```
 
 **Output:**
-![2be53b9927293620fe4fca25660d997c.png](:/e7d790314cb44cc28d9f33a438065a37)
+
+<img width="495" height="181" alt="image" src="https://github.com/user-attachments/assets/c9c8ed68-267f-4fc6-8ce9-678a82c5a1b7" />
