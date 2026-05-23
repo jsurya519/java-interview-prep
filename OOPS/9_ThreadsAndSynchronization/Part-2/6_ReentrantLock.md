@@ -1,9 +1,14 @@
 ## ReentrantLock features
 It provides a more flexible mechanism for thread synchronization compared to the synchronized keyword.
+
 **Reentrancy:** The same thread can acquire the lock multiple times. Each lock acquisition must be paired with a corresponding unlock.
+
 **Explicit Locking:** Unlike synchronized, Reentrant Lock requires manual locking and unlocking using lock() and unlock().
+
 **Interruptible:** Threads waiting for a lock can be interrupted.
+
 **TryLock() Support:** Threads can attempt to acquire a lock without waiting indefinitely.
+
 **Fairness Policy:** Locks can be configured to grant access in first-come-first-serve order.
 
 ```java
