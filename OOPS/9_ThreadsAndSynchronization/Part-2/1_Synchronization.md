@@ -219,7 +219,7 @@ public class Dummy {
 ```
 
 **Note:**
-With synchronized method or block, Java automatically acquires the lock associated with an object. That internal lock mechanism is called the monitor lock (or simply monitor).
+With synchronized method or block, Java automatically acquires the lock associated with an object. That internal lock mechanism is called the monitor/intrinsic lock (or simply monitor).
 ```java
 synchronized(this) {
     count++;
