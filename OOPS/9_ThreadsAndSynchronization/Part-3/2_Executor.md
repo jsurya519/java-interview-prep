@@ -1,7 +1,8 @@
 ## Executor Framework:
  It lets developers submit tasks without manually creating or controlling threads, as the framework handles scheduling and execution.
 
- ![f02956be463b585e163c4ea3967bd67b.png](:/cc9a0eb4f9b145cb86ffdb87607995ab)
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/cf2a46a3-647f-4d1a-8be9-f2982936e03e" />
+
 
 ##  Common Types of Executors:
 
