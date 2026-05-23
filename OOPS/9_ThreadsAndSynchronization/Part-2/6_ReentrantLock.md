@@ -70,6 +70,7 @@ ReentrantLock fairLock = new ReentrantLock(true); // Fair lock
 ```
 
 **Fair lock:** Threads acquire the lock in the order they requested it (first-come-first-serve).
+
 **Non-fair lock (default):** Threads may acquire the lock in an arbitrary order, which can improve throughput but may cause starvation.
 
 ## Advantages over synchronized
