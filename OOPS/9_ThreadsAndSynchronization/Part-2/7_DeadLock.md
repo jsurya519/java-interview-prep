@@ -20,14 +20,14 @@ class Util {
 class Shared {
 
     // first synchronized method
-    synchronized void test1(Shared s2)
+    synchronized void test1(Shared st)
     {
         System.out.println(Thread.currentThread().getName()
                            + " enters test1 of " + this);
         Util.sleep(1000);
 
         // Trying to call test2 on another object
-        s2.test2();
+        st.test2();
         System.out.println(Thread.currentThread().getName()
                            + " exits test1 of " + this);
     }
