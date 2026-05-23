@@ -145,7 +145,7 @@ public class GFG{
 | Method | Description |
 |---|---|
 | `void lock()` | Acquires the lock if available; blocks if the lock is held by another thread |
-| `void lockInterruptibly()` | Acquires the lock unless the thread is interrupted while waiting |
+| `void lockInterruptibly()` | Wait to acquire the lock, but stop waiting if interrupted |
 | `void unlock()` | Releases the lock |
 | `Condition newCondition()` | Returns a `Condition` object associated with the lock. Useful for wait/notify |
 | `boolean tryLock()` | Attempts to acquire the lock immediately, returning `true` if successful |
