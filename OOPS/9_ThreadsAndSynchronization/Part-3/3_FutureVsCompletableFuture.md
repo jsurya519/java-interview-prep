@@ -2,6 +2,7 @@
 Future and CompletableFuture are both used for asynchronous programming in Java, but CompletableFuture is much more powerful and flexible.
 
 Future — Basic async result holder
+
 CompletableFuture — Advanced async pipeline
 
 ## 1. Future Example
