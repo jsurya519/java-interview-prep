@@ -7,9 +7,11 @@ There are two ways to create a string in Java:
 **1. String literal (Static Memory)**
 In Java, the String Constant Pool (SCP) is a special area inside the heap memory where string literals are stored. To make Java more memory efficient (because no new objects are created if it exists already in the string constant pool).
 
-![bf62c0a0dcdb542a064c28ae0b1f30c9.png](:/36ddc6ec14484dd387a53c7f66d10161)
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/79e244fb-cf85-415a-a350-28ac52c7712c" />
 
-![cfe459712ec454782394f4fc096ceea6.png](:/a1a7107c4ee74b188270f4f687f3eabf)
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/061f9d3a-4616-466c-ac43-695319e51f38" />
+
 
 **2. Using new keyword (Heap Memory)**
 Using the new keyword creates a new object in heap memory, even if the same string already exists in the pool.
@@ -17,7 +19,8 @@ Using the new keyword creates a new object in heap memory, even if the same stri
 2. The string literal is stored in the string pool (if not already present)
 3. The reference variable points to the heap object, not the pool
 
-![d49935b786b978166445ab5dc42aa3d2.png](:/afbe1e839a474e958073c22913276b34)
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/8f6ecc3e-65a4-4692-baca-0820eb5f07cc" />
+
 
 
 ## Commonly Used Java String Methods
