@@ -3,8 +3,11 @@ yield() is a static method that gives a hint to the thread scheduler that:
 "Current thread is willing to pause and allow other runnable threads to execute."
 
 It does:
+
 NOT release locks
+
 NOT move thread to waiting state
+
 NOT guarantee context switch
 
 Thread usually remains in RUNNABLE state.
