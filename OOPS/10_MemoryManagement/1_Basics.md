@@ -20,8 +20,11 @@ Scanner sc = new Scanner(System.in)
 Here, the Scanner object is stored in the heap and the reference sc is stored in the stack.
 
 **Heap Memory is divided into several regions:**
+
 **Young Generation:** The area within the heap where new objects are generally allocated.
+
 **Old Generation:** The area within the heap where long-lived metadata Objects are stored after surviving multiple garbage collection cycles.
+
 **Permanent Generation:** It stores metadata about classes and methods in Java 7 and earlier versions.
 
 Starting with Java 8, the old and permanent generation space was removed and replaced by metaspace. This change helps Java to handle class metadata better and also reduces the chances of errors caused by permanent generation.
