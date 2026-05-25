@@ -1,5 +1,6 @@
 ## Java Stack vs Heap Memory Allocation
 **Stack Memory:** Stores primitive local variables, method call information, and references to objects during program execution.
+
 **Heap Memory:** Stores actual objects and dynamic data allocated at runtime. Objects created with new are placed here, and this memory is managed by the Garbage Collector.
 
 ```java
