@@ -36,8 +36,6 @@ Even though the programmer is not responsible for destroying useless objects but
 **3. Requesting Garbage Collection**
 1. Once an object is eligible for garbage collection, it may not be destroyed immediately.The garbage collector runs at the JVM's discretion and you cannot predict when it will occur.
 2. We can also request JVM to run Garbage Collector. There are two ways to do it.
-	1. System.gc()
-	2. Runtime.getRuntime().gc():
 **Using System.gc():** This static method requests the JVM to perform garbage collection.
 **Using Runtime.getRuntime().gc():** This method also requests garbage collection through the Runtime class.
 
