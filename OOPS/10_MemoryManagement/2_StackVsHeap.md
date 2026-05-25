@@ -39,4 +39,5 @@ public class Main {
 ```
 
 **Memory representation for the above example:**
-![98b6006738fa511c3e6dba1cd48ef833.png](:/af1529bf0e094f37b6ac7be58787f9a5)
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/db63d4f8-9934-4e5e-a026-149aae7368a1" />
