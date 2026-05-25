@@ -3,7 +3,9 @@
 2. It uses a garbage collection to reclaim memory by removing unused objects, eliminating the need for manual memory management.
 
 ## JVM memory structure
-![699dcb0de00a709e058879adaad364a8.png](:/7e1a555a974b43ad84a20a28808e9694)
+
+<img width="660" height="411" alt="image" src="https://github.com/user-attachments/assets/5d85c60a-af7b-42c6-a4e1-137b346bdb89" />
+
 
 **1. Heap Area**
 1. It is created when the JVM starts.JVM allows user to adjust the heap size.
