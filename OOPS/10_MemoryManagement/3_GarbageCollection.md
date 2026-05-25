@@ -10,7 +10,8 @@
 
 ## Types of garbage collection:
 1. **Minor GC**: Cleans up short-lived objects from the Young Generation. It happens frequently and is usually fast.
-2. **Major GC (Full GC)**: Cleans up objects from the Old Generation (and sometimes entire heap). It happens less often and is slower.
+2. 
+3. **Major GC (Full GC)**: Cleans up objects from the Old Generation (and sometimes entire heap). It happens less often and is slower.
 
 ## Key Concepts on Garbage Collection
 **1. Unreachable Objects**
