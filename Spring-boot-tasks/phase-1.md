@@ -19,7 +19,7 @@ Duration:
 Install the following tools:
 
 - IntelliJ IDEA Community Edition
-- Java (JDK 17 recommended)
+- Java
 - Maven
 - Postman
 - MySQL
