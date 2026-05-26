@@ -44,7 +44,7 @@ Also verify:
 
 ### Steps
 
-1. Create a Spring Boot project using Spring Initializr
+1. Create a Spring Boot project using Spring Initializr (https://start.spring.io/)
 2. Add only one dependency:
    - Spring Web
 3. Project Name:
