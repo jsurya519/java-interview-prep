@@ -3,7 +3,8 @@ Memory leaks in Java occur when objects that are no longer needed remain referen
 1. Java provides automatic garbage collection, but it cannot remove objects that are still referenced.
 2. Poor reference management is the main reason memory leaks occur in Java applications.
 
-![7ae0d359ea0b63ee0de17e41540a5193.png](:/594ff5f29cb748a894fbf3d40562d72d)
+<img width="744" height="277" alt="image" src="https://github.com/user-attachments/assets/d1172b29-2e77-4e20-951d-bc05f2983e82" />
+
 
 **Note:** If an object is no longer needed, it is important to remove references to it so the garbage collector can free its memory.
 
@@ -28,7 +29,8 @@ public class GFG{
 }
 ```
 
-![521af26f575f193d6e61ca042b5b199a.png](:/ea3b6211cd7e4e39b5cfe31e5c8b86ec)
+<img width="1100" height="207" alt="image" src="https://github.com/user-attachments/assets/6df2c9f1-bf0f-4735-b28b-f4938b52673e" />
+
 
 ## How to Avoid Memory Leaks?
 1. Stop keeing things that we do not need in our program do not initialize unnecessary variables and list items to null.
