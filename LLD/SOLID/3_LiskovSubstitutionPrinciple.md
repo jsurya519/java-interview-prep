@@ -4,36 +4,43 @@
 ```java
 class Rectangle
 {
-    private double height, width;
+    private double length;
+    private double breadth;
 
-    Rectangle(double h, double w)
+    Rectangle(double length, double breadth)
     {
-        this.height=h;
-        this.width=w;
+        this.length = length;
+        this.breadth = breadth;
     }
 
-    public double area()
+    double calculateArea()
     {
-        return this.height*this.width;
+        return length * breadth;
     }
-
 }
 
 class Square extends Rectangle
 {
-    Square(double w)
+    Square(double side)
     {
-        super(w,w);
+        super(side, side);
     }
-
 }
 
-class LiskovSubstitution
+public class Main
 {
+    static void printArea(Rectangle r)
+    {
+        System.out.println("Area = " + r.calculateArea());
+    }
+
     public static void main(String[] args)
     {
-        Rectangle sq = new Square(5d);
-        System.out.println(sq.area());
+        Rectangle rectangle = new Rectangle(4, 5);
+        Rectangle square = new Square(5);
+
+        printArea(rectangle);
+        printArea(square);
     }
 }
 ```
