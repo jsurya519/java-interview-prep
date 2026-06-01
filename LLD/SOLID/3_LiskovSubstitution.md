@@ -1,4 +1,5 @@
-"Derived or child classes must be substitutable for their base or parent classes". This principle ensures that any class that is the child of a parent class should be usable in place of its parent without any unexpected behaviour.
+## Liskov's Substitution Principle
+**"Derived or child classes must be substitutable for their base or parent classes"**. This principle ensures that any class that is the child of a parent class should be usable in place of its parent without any unexpected behaviour.
 
 ```java
 class Rectangle
