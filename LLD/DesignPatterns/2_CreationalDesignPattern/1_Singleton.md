@@ -3,7 +3,7 @@ The Singleton Design Pattern ensures that only one instance of a class is create
 ```java
 class Singleton
 {
-    private static Singleton instance;
+    private static volatile Singleton instance;
     private Singleton()
     {
     }
