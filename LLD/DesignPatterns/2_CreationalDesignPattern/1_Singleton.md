@@ -1,3 +1,4 @@
+## Singleton Design Pattern
 The Singleton Design Pattern ensures that only one instance of a class is created throughout the entire application, and provides a global point of access to it.
 
 ```java
