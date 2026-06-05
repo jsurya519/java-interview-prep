@@ -2,48 +2,43 @@
 Adapter Design Pattern is a structural pattern that acts as a bridge between two incompatible interfaces, allowing them to work together. It is especially useful for integrating legacy code or third-party libraries into a new system.
 
 ```java
-interface ModernPrinter
-{
-    void print(String doc);
-}
-
 class LegacyPrinter
 {
-    void printDocument(String doc, int status)
+    void printDoc(String s, int status)
     {
         if(status == 1)
-        {
-            System.out.println("print document");
-        }
+            System.out.println(s);
         else
-        {
-            System.out.println("system error");
-        }
+            System.out.println("ERROR PRINTING");
     }
 }
 
-class PrinterAdapter implements ModernPrinter
+interface ModernPrinter
 {
+    void print(String s);
+}
 
-    private LegacyPrinter lp;
+class AdapterPrinter implements ModernPrinter
+{
+    private final LegacyPrinter lp;
 
-    PrinterAdapter(LegacyPrinter p)
+    AdapterPrinter(LegacyPrinter lp)
     {
-        this.lp=p;
+        this.lp=lp;
     }
 
     @Override
-    public void print(String doc)
+    public void print(String s)
     {
-        this.lp.printDocument(doc, 1);
+        this.lp.printDoc(s, 1);
     }
 }
 
-class AdapterPattern
+class Main
 {
     public static void main(String[] args)
     {
-        ModernPrinter mp = new PrinterAdapter(new LegacyPrinter());
+        ModernPrinter mp = new AdapterPrinter(new LegacyPrinter());
         mp.print("Hello World!");
     }
 }
