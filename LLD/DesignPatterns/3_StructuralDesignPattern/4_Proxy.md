@@ -29,7 +29,7 @@ class RealImage implements Image {
 // Proxy
 class ProxyImage implements Image {
     private RealImage realImage;
-    private String filename;
+    private final String filename;
 
     ProxyImage(String filename) {
         this.filename = filename;
