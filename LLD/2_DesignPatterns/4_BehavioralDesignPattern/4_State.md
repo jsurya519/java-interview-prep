@@ -2,78 +2,83 @@
 It allows an object to change its behavior when its internal state changes. This pattern is particularly useful when an object's behavior depends on its state, and the state can change during the object's lifecycle.
 
 ```java
-interface VendingMachineState {
-    void handleRequest();
+interface VendingMachineState
+{
+    void handleRequest(VendingMachineContext context);
 }
 
-class ReadyState implements VendingMachineState {
+// State 1
+class ReadyState implements VendingMachineState
+{
     @Override
-    public void handleRequest() {
-        System.out.println("Ready state: Please select a product.");
+    public void handleRequest(VendingMachineContext context)
+    {
+        System.out.println("Machine Ready");
+
+        // Transition to next state
+        context.setState(new ProductSelectState());
     }
 }
 
-class ProductSelectedState implements VendingMachineState {
+// State 2
+class ProductSelectState implements VendingMachineState
+{
     @Override
-    public void handleRequest() {
-        System.out.println("Product selected state: Processing payment.");
+    public void handleRequest(VendingMachineContext context)
+    {
+        System.out.println("Product Selected");
+
+        // Transition to next state
+        context.setState(new PaymentProcessingState());
     }
 }
 
-class PaymentPendingState implements VendingMachineState {
+// State 3
+class PaymentProcessingState implements VendingMachineState
+{
     @Override
-    public void handleRequest() {
-        System.out.println("Payment pending state: Dispensing product.");
+    public void handleRequest(VendingMachineContext context)
+    {
+        System.out.println("Payment Processed");
+
+        // Transition back to Ready State
+        context.setState(new ReadyState());
     }
 }
 
-class OutOfStockState implements VendingMachineState {
-    @Override
-    public void handleRequest() {
-        System.out.println("Out of stock state: Product unavailable. Please select another product.");
-    }
-}
-
-class VendingMachineContext {
+// Context
+class VendingMachineContext
+{
     private VendingMachineState state;
 
-    public void setState(VendingMachineState state) {
+    VendingMachineContext()
+    {
+        this.state = new ReadyState();
+    }
+
+    public void setState(VendingMachineState state)
+    {
         this.state = state;
     }
 
-    public void request() {
-        state.handleRequest();
+    public void executeRequest()
+    {
+        state.handleRequest(this);
     }
 }
 
-public class Main {
-    public static void main(String[] args) {
-        // Create context
-        VendingMachineContext vendingMachine = new VendingMachineContext();
+// Client
+public class Main
+{
+    public static void main(String[] args)
+    {
+        VendingMachineContext machine = new VendingMachineContext();
 
-        // Set initial state
-        vendingMachine.setState(new ReadyState());
-
-        // Request state change
-        vendingMachine.request();
-
-        // Change state
-        vendingMachine.setState(new ProductSelectedState());
-
-        // Request state change
-        vendingMachine.request();
-
-        // Change state
-        vendingMachine.setState(new PaymentPendingState());
-
-        // Request state change
-        vendingMachine.request();
-
-        // Change state
-        vendingMachine.setState(new OutOfStockState());
-
-        // Request state change
-        vendingMachine.request();
+        machine.executeRequest();
+        machine.executeRequest();
+        machine.executeRequest();
+        machine.executeRequest();
+        machine.executeRequest();
     }
 }
 ```
