@@ -1,4 +1,4 @@
-
+## Proxy Design Pattern
 Proxy Design Pattern is a structural design pattern where a proxy object acts as a placeholder to control access to the real object. The client communicates with the proxy, which forwards requests to the real object. The proxy can also provide extra functionality such as access control, lazy initialization, logging, and caching.
 
 ```java
