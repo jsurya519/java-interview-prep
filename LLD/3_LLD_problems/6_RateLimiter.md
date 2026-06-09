@@ -213,3 +213,274 @@ public class RateLimiter {
 }
 
 ```
+
+---
+Now lets solve the above problem for multi-threads.
+
+**Version 1:** Just making entire function as synchronized.
+
+```java
+ synchronized boolean isAllowed(String clientId, int requests)
+    {
+
+        if(!map.containsKey(clientId))
+        {
+            map.put(clientId, new ArrayDeque<>());
+            countMap.put(clientId, 0L);
+        }
+
+        removeNodesBeyondWindow(clientId);
+
+        if(countMap.get(clientId) + requests > requestsLimit)
+            return false;
+
+        RateLimiterRequest obj = new RateLimiterRequest(requests, getCurrentTimeStamp());
+
+        Queue<RateLimiterRequest> q = map.get(clientId);
+        q.add(obj);
+
+        countMap.put(clientId, countMap.get(clientId) + obj.getRequests());
+        return true;
+    }
+```
+
+**Version 2:**  We should synchronize only the object that is related to the same client.
+To achieve this we should create a ClientWindow class.
+
+```java
+package lldproblems;
+
+
+import java.util.ArrayDeque;
+import java.util.Map;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentHashMap;
+
+
+class ClientWindow
+{
+    Queue<RateLimiterRequest> q;
+    long count;
+
+    public ClientWindow() {
+        this.q = new ArrayDeque<>();
+        this.count =0 ;
+    }
+
+    public Queue<RateLimiterRequest> getQ() {
+        return q;
+    }
+
+    public long getCount() {
+        return count;
+    }
+
+    public void setCount(long count) {
+        this.count = count;
+    }
+}
+
+
+class RateLimiterRequest
+{
+    private final int requests;
+    private final long ts;
+
+    public RateLimiterRequest(int requests, long ts) {
+        this.requests = requests;
+        this.ts = ts;
+    }
+
+    public long getTs() {
+        return ts;
+    }
+
+
+    public int getRequests() {
+        return requests;
+    }
+}
+
+public class RateLimiter {
+
+    private final int requestsLimit;
+    private final int windowSeconds;
+    private Map<String, ClientWindow> map;
+
+    public RateLimiter(int requestsLimit, int windowSeconds) {
+        this.requestsLimit = requestsLimit;
+        this.windowSeconds = windowSeconds;
+        map = new ConcurrentHashMap<>();
+    }
+
+
+
+    boolean isAllowed(String clientId, int requests)
+    {
+
+        ClientWindow window = map.computeIfAbsent(clientId, id -> new ClientWindow());
+
+        synchronized (window)
+        {
+            removeNodesBeyondWindow(window);
+
+            if(window.getCount() + requests > requestsLimit)
+                return false;
+
+            RateLimiterRequest obj = new RateLimiterRequest(requests, getCurrentTimeStamp());
+
+            Queue<RateLimiterRequest> q = window.getQ();
+            q.add(obj);
+
+            window.setCount(window.getCount()+requests);
+            return true;
+        }
+
+
+    }
+
+    void removeNodesBeyondWindow(ClientWindow window)
+    {
+        Queue<RateLimiterRequest> q = window.getQ();
+        long now = getCurrentTimeStamp();
+
+        while(!q.isEmpty() && now - q.peek().getTs() > windowSeconds*1000)
+        {
+            RateLimiterRequest obj = q.poll();
+            window.setCount(window.getCount()-obj.getRequests());
+        }
+    }
+
+    long getCurrentTimeStamp()
+    {
+        //logic to return currentTimestamp;
+
+        return System.currentTimeMillis();
+    }
+
+}
+
+```
+
+**Version 3:** Using ReEntrantLock;
+
+```java
+package lldproblems;
+
+
+import java.util.ArrayDeque;
+import java.util.Map;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.ReentrantLock;
+
+
+class ClientWindow
+{
+    Queue<RateLimiterRequest> q;
+    long count;
+    ReentrantLock lock;
+
+    public ClientWindow() {
+        this.q = new ArrayDeque<>();
+        this.count =0 ;
+        this.lock = new ReentrantLock();
+    }
+
+    public Queue<RateLimiterRequest> getQ() {
+        return q;
+    }
+
+    public long getCount() {
+        return count;
+    }
+
+    public void setCount(long count) {
+        this.count = count;
+    }
+}
+
+
+class RateLimiterRequest
+{
+    private final int requests;
+    private final long ts;
+
+    public RateLimiterRequest(int requests, long ts) {
+        this.requests = requests;
+        this.ts = ts;
+    }
+
+    public long getTs() {
+        return ts;
+    }
+
+
+    public int getRequests() {
+        return requests;
+    }
+}
+
+public class RateLimiter {
+
+    private final int requestsLimit;
+    private final int windowSeconds;
+    private Map<String, ClientWindow> map;
+
+    public RateLimiter(int requestsLimit, int windowSeconds) {
+        this.requestsLimit = requestsLimit;
+        this.windowSeconds = windowSeconds;
+        map = new ConcurrentHashMap<>();
+    }
+
+
+
+    boolean isAllowed(String clientId, int requests)
+    {
+
+        ClientWindow window = map.computeIfAbsent(clientId, id -> new ClientWindow());
+
+        try {
+            window.lock.lock();
+
+            removeNodesBeyondWindow(window);
+
+            if (window.getCount() + requests > requestsLimit)
+                return false;
+
+            RateLimiterRequest obj = new RateLimiterRequest(requests, getCurrentTimeStamp());
+
+            Queue<RateLimiterRequest> q = window.getQ();
+            q.add(obj);
+
+            window.setCount(window.getCount() + requests);
+            return true;
+        }
+        finally {
+            window.lock.unlock();
+        }
+
+    }
+
+    void removeNodesBeyondWindow(ClientWindow window)
+    {
+        Queue<RateLimiterRequest> q = window.getQ();
+        long now = getCurrentTimeStamp();
+
+        while(!q.isEmpty() && now - q.peek().getTs() > windowSeconds*1000)
+        {
+            RateLimiterRequest obj = q.poll();
+            window.setCount(window.getCount()-obj.getRequests());
+        }
+    }
+
+    long getCurrentTimeStamp()
+    {
+        //logic to return currentTimestamp;
+
+        return System.currentTimeMillis();
+    }
+
+}
+
+```
