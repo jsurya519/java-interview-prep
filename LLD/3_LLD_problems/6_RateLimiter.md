@@ -484,3 +484,170 @@ public class RateLimiter {
 }
 
 ```
+
+---
+# Fixed window solution
+Just resetting count every fixed interval;
+
+```java
+package lldproblems;
+
+
+import java.util.ArrayDeque;
+import java.util.Map;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.ReentrantLock;
+
+
+class ClientWindow
+{
+    int usedTokens;
+    long lastRefillTime;
+    ReentrantLock lock;
+
+    public ClientWindow() {
+        this.usedTokens = 0;
+        this.lastRefillTime = System.currentTimeMillis();
+        this.lock = new ReentrantLock();
+    }
+}
+
+public class RateLimiter {
+
+    private final int requestsLimit;
+    private final int windowSeconds;
+    private Map<String, ClientWindow> map;
+
+    public RateLimiter(int requestsLimit, int windowSeconds) {
+        this.requestsLimit = requestsLimit;
+        this.windowSeconds = windowSeconds;
+        map = new ConcurrentHashMap<>();
+    }
+
+
+
+    boolean isAllowed(String clientId, int requests)
+    {
+
+        ClientWindow window = map.computeIfAbsent(clientId, id -> new ClientWindow());
+
+        try {
+            window.lock.lock();
+
+            reFillTokens(window);
+
+            if (window.usedTokens + requests > requestsLimit)
+                return false;
+
+            window.usedTokens += requests;
+            return true;
+        }
+        finally {
+            window.lock.unlock();
+        }
+
+    }
+
+    private void reFillTokens(ClientWindow window) {
+        long now = System.currentTimeMillis();
+        if(now-window.lastRefillTime > 60*1000)
+            window.usedTokens=0;
+    }
+
+}
+
+```
+
+---
+# Token bucket filling
+
+```java
+package lldproblems;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.ReentrantLock;
+
+class ClientBucket
+{
+    double availableTokens;
+    long lastRefillTime;
+
+    ReentrantLock lock;
+
+    public ClientBucket(double capacity)
+    {
+        this.availableTokens = capacity;
+        this.lastRefillTime = System.currentTimeMillis();
+        this.lock = new ReentrantLock();
+    }
+}
+
+public class TokenBucketRateLimiter
+{
+    private final double capacity;
+    private final double refillRatePerSecond;
+
+    private final Map<String, ClientBucket> buckets;
+
+    public TokenBucketRateLimiter(
+            int capacity,
+            int refillTokensPerWindow,
+            int windowSeconds)
+    {
+        this.capacity = capacity;
+
+        this.refillRatePerSecond =
+                (double) refillTokensPerWindow / windowSeconds;
+
+        this.buckets = new ConcurrentHashMap<>();
+    }
+
+    public boolean isAllowed(
+            String clientId,
+            int requests)
+    {
+        ClientBucket bucket =
+                buckets.computeIfAbsent(
+                        clientId,
+                        id -> new ClientBucket(capacity));
+
+        bucket.lock.lock();
+
+        try
+        {
+            refillTokens(bucket);
+
+            if(bucket.availableTokens < requests)
+                return false;
+
+            bucket.availableTokens -= requests;
+
+            return true;
+        }
+        finally
+        {
+            bucket.lock.unlock();
+        }
+    }
+
+    private void refillTokens(ClientBucket bucket)
+    {
+        long now = System.currentTimeMillis();
+
+        double elapsedSeconds =
+                (now - bucket.lastRefillTime) / 1000.0;
+
+        double tokensToAdd =
+                elapsedSeconds * refillRatePerSecond;
+
+        bucket.availableTokens =
+                Math.min(
+                        capacity,
+                        bucket.availableTokens + tokensToAdd);
+
+        bucket.lastRefillTime = now;
+    }
+}
+```
