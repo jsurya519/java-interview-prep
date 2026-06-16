@@ -1,152 +1,150 @@
-1. Spring Core & IoC (1-10)
-What is Dependency Injection?
-How does Spring IoC Container work?
-Difference between BeanFactory and ApplicationContext?
-What are singleton, prototype, request, and session scopes?
-How does @Autowired work internally?
-Difference between @Component, @Service, @Repository, and @Controller?
-How does @Primary work?
-What is @Qualifier and when do you use it?
-How does Spring resolve circular dependencies?
-What are BeanPostProcessors?
+# Spring & Spring Boot Interview Questions
 
-2. Spring Boot Fundamentals (11-20)
-Why Spring Boot over Spring Framework?
-What is auto-configuration?
-How does @SpringBootApplication work internally?
-Explain component scanning.
-How can you disable auto-configuration?
-What is Spring Boot Starter?
-How do starters reduce dependency management?
-What happens during Spring Boot startup?
-How does embedded Tomcat work?
-Difference between Spring MVC and Spring Boot?
+## 1. Spring Core & IoC (1–10)
+1. What is Dependency Injection?
+2. How does Spring IoC Container work?
+3. Difference between BeanFactory and ApplicationContext?
+4. What are singleton, prototype, request, and session scopes?
+5. How does @Autowired work internally?
+6. Difference between @Component, @Service, @Repository, and @Controller?
+7. How does @Primary work?
+8. What is @Qualifier and when do you use it?
+9. How does Spring resolve circular dependencies?
+10. What are BeanPostProcessors?
 
-3. Configuration (21-30)
-Difference between application.properties and application.yml?
-How does @Value work?
-How does @ConfigurationProperties work?
-Difference between @Configuration and @Component?
-What is profile-specific configuration?
-How do Spring Profiles work?
-How do you activate profiles?
-How do you externalize configurations?
-How do environment variables override properties?
-What is Spring Cloud Config?
+## 2. Spring Boot Fundamentals (11–20)
+11. Why Spring Boot over Spring Framework?
+12. What is auto-configuration?
+13. How does @SpringBootApplication work internally?
+14. Explain component scanning.
+15. How can you disable auto-configuration?
+16. What is Spring Boot Starter?
+17. How do starters reduce dependency management?
+18. What happens during Spring Boot startup?
+19. How does embedded Tomcat work?
+20. Difference between Spring MVC and Spring Boot?
 
+## 3. Configuration (21–30)
+21. Difference between application.properties and application.yml?
+22. How does @Value work?
+23. How does @ConfigurationProperties work?
+24. Difference between @Configuration and @Component?
+25. What is profile-specific configuration?
+26. How do Spring Profiles work?
+27. How do you activate profiles?
+28. How do you externalize configurations?
+29. How do environment variables override properties?
+30. What is Spring Cloud Config?
 
-4. Bean Lifecycle (31-40)
-Explain Spring Bean lifecycle.
-What is @PostConstruct?
-What is @PreDestroy?
-Difference between InitializingBean and @PostConstruct?
-What are BeanFactoryPostProcessors?
-How are beans instantiated?
-What happens if two beans have same name?
-How does lazy initialization work?
-What is eager initialization?
-When should prototype scope be avoided?
+## 4. Bean Lifecycle (31–40)
+31. Explain Spring Bean lifecycle.
+32. What is @PostConstruct?
+33. What is @PreDestroy?
+34. Difference between InitializingBean and @PostConstruct?
+35. What are BeanFactoryPostProcessors?
+36. How are beans instantiated?
+37. What happens if two beans have same name?
+38. How does lazy initialization work?
+39. What is eager initialization?
+40. When should prototype scope be avoided?
 
+## 5. Spring MVC (41–50)
+41. Explain DispatcherServlet flow.
+42. Difference between @Controller and @RestController?
+43. What is HandlerMapping?
+44. What is ViewResolver?
+45. How does request mapping work?
+46. Difference between @PathVariable and @RequestParam?
+47. What is @RequestBody?
+48. How does Jackson serialization work?
+49. How do you implement pagination?
+50. How do you handle file uploads?
 
-5. Spring MVC (41-50)
-Explain DispatcherServlet flow.
-Difference between @Controller and @RestController?
-What is HandlerMapping?
-What is ViewResolver?
-How does request mapping work?
-Difference between @PathVariable and @RequestParam?
-What is @RequestBody?
-How does Jackson serialization work?
-How do you implement pagination?
-How do you handle file uploads?
+## 6. Exception Handling (51–55)
+51. Difference between checked and runtime exceptions?
+52. How does @ExceptionHandler work?
+53. What is @ControllerAdvice?
+54. How do you create global exception handling?
+55. How do you return standard error responses?
 
+## 7. Spring Data JPA (56–70)
+56. Difference between JPA and Hibernate?
+57. What is EntityManager?
+58. What are entity states?
+59. Difference between save() and saveAndFlush()?
+60. What is dirty checking?
+61. What is persistence context?
+62. What causes LazyInitializationException?
+63. Difference between FetchType.LAZY and EAGER?
+64. What is N+1 query problem?
+65. How do you solve N+1 issue?
+66. What is first-level cache?
+67. What is second-level cache?
+68. Difference between getById() and findById()?
+69. What is optimistic locking?
+70. What is pessimistic locking?
 
-6. Exception Handling (51-55)
-Difference between checked and runtime exceptions?
-How does @ExceptionHandler work?
-What is @ControllerAdvice?
-How do you create global exception handling?
-How do you return standard error responses?
+## 8. Transactions (71–80)
+71. How does @Transactional work internally?
+72. Why does @Transactional fail in self-invocation?
+73. What is transaction propagation?
+74. Explain REQUIRED propagation.
+75. Explain REQUIRES_NEW propagation.
+76. Explain NESTED propagation.
+77. What causes transaction rollback?
+78. Difference between checked and unchecked rollback?
+79. What is transaction isolation?
+80. Explain all isolation levels.
 
+## 9. Microservices (81–90)
+81. How do services communicate?
+82. Difference between RestTemplate and WebClient?
+83. Why is RestTemplate deprecated?
+84. What is service discovery?
+85. What is Eureka?
+86. What is API Gateway?
+87. What is Circuit Breaker?
+88. What is distributed tracing?
+89. How do you propagate correlation IDs?
+90. How do you handle distributed transactions?
 
-7. Spring Data JPA (56-70)
-Difference between JPA and Hibernate?
-What is EntityManager?
-What are entity states?
-Difference between save() and saveAndFlush()?
-What is dirty checking?
-What is persistence context?
-What causes LazyInitializationException?
-Difference between FetchType.LAZY and EAGER?
-What is N+1 query problem?
-How do you solve N+1 issue?
-What is first-level cache?
-What is second-level cache?
-Difference between getById() and findById()?
-What is optimistic locking?
-What is pessimistic locking?
+## 10. Security (91–95)
+91. How does Spring Security work?
+92. Difference between authentication and authorization?
+93. How does JWT authentication work?
+94. How do filters work in Spring Security?
+95. How would you secure REST APIs?
 
+## 11. Production & Performance (96–100)
+96. How do you monitor Spring Boot applications?
+97. What is Spring Boot Actuator?
+98. How do you troubleshoot memory leaks?
+99. How would you improve startup time?
+100. Your service latency suddenly increased from 100ms to 3s. How would you debug it?
 
-8. Transactions (71-80)
-How does @Transactional work internally?
-Why does @Transactional fail in self-invocation?
-What is transaction propagation?
-Explain REQUIRED propagation.
-Explain REQUIRES_NEW propagation.
-Explain NESTED propagation.
-What causes transaction rollback?
-Difference between checked and unchecked rollback?
-What is transaction isolation?
-Explain all isolation levels.
+---
 
+## Top 20 Must-Master Questions
 
-9. Microservices (81-90)
-How do services communicate?
-Difference between RestTemplate and WebClient?
-Why is RestTemplate deprecated?
-What is service discovery?
-What is Eureka?
-What is API Gateway?
-What is Circuit Breaker?
-What is distributed tracing?
-How do you propagate correlation IDs?
-How do you handle distributed transactions?
+For your experience level, prioritize these:
 
-
-10. Security (91-95)
-How does Spring Security work?
-Difference between authentication and authorization?
-How does JWT authentication work?
-How do filters work in Spring Security?
-How would you secure REST APIs?
-11. Production & Performance (96-100)
-How do you monitor Spring Boot applications?
-What is Spring Boot Actuator?
-How do you troubleshoot memory leaks?
-How would you improve startup time?
-Your service latency suddenly increased from 100ms to 3s. How would you debug it?
-
---------------------------
-
-For your experience level, I would prioritize these Top 20 must-master questions:
-
-@SpringBootApplication internals
-Auto Configuration
-Bean Lifecycle
-@Autowired internals
-DispatcherServlet flow
-@Transactional internals
-Propagation levels
-Isolation levels
-Self-invocation problem
-Persistence Context
-Dirty Checking
-Lazy vs Eager
-N+1 problem
-Optimistic vs Pessimistic Locking
-RestTemplate vs WebClient
-Circuit Breaker
-JWT flow
-Spring Security filter chain
-Actuator
-Performance troubleshooting
+1. @SpringBootApplication internals
+2. Auto Configuration
+3. Bean Lifecycle
+4. @Autowired internals
+5. DispatcherServlet flow
+6. @Transactional internals
+7. Propagation levels
+8. Isolation levels
+9. Self-invocation problem
+10. Persistence Context
+11. Dirty Checking
+12. Lazy vs Eager
+13. N+1 problem
+14. Optimistic vs Pessimistic Locking
+15. RestTemplate vs WebClient
+16. Circuit Breaker
+17. JWT flow
+18. Spring Security filter chain
+19. Actuator
+20. Performance troubleshooting
